@@ -1,5 +1,5 @@
 <ul>
-    <% @page.children.each do |page| %>
+    <% @page.children.each do |page, children| %>
     <li>
         <%= link_to_unless_current page.name, page %>
         <%= render 'submenu_pages', pages: page.children if page.children.present? %>
